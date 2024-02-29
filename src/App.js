@@ -65,16 +65,19 @@ const Sphere = () => {
 
 export default function App() {
   return (
-    <Canvas
-      style={{
-        background: 'linear-gradient(rgb(8, 23, 39),rgb(24, 62, 103)) ',
-        width: '100vw',
-        height: '100vh',
-      }}
-    >
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Sphere />
-    </Canvas>
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <Canvas
+        style={{
+          background: 'linear-gradient(rgb(8, 23, 39),rgb(24, 62, 103))',
+          width: '100%',
+          height: '100%',
+        }}
+      >
+        <camera position={[0, 0, 10]} />
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Sphere />
+      </Canvas>
+    </div>
   );
 }
